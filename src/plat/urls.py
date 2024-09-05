@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, add_edit_plat, update_plat, delete_plat
+from .views import index, add_plat, update_plat, delete_plat
 
 app_name = 'plat'
 
