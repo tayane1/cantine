@@ -51,12 +51,12 @@ def update_menu(request, id):
             messages.error(request, 'Erreur lors de la modification du menu')
             return render(request, 'menu/forms.html', {'form': menu_form})
             
-        menu_form = MenuForm(instance=menu)
-        context = {'form': menu_form,
+    menu_form = MenuForm(instance=menu)
+    context = {'form': menu_form,
             'title': 'Modification du menu',
         
         }
-        return render(request, 'menu/forms.html', context)
+    return render(request, 'menu/forms.html', context)
         
         
 
