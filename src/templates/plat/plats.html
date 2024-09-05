@@ -70,9 +70,16 @@
                       </div>
                     </div>
                   </td>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">{{ plat.summary }}</h6>
+                      </div>
+                    </div>
+                  </td>
                   <td class="align-middle text-center text-sm">
-                    <a href="{% url 'plat:update_menu' plat.id %}" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-1 px-4 rounded transition duration-300">Modifier</a>
-                    <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-4 rounded ml-2 transition duration-300" onclick="openModal({{ student.id }})">Supprimer</button>
+                    <a href="{% url 'plat:update_plat' plat.id %}" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-1 px-4 rounded transition duration-300">Modifier</a>
+                    <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-4 rounded ml-2 transition duration-300" onclick="openModal({{ plat.id }})">Supprimer</button>
                   </td>
                 </tr>
                 {% endfor %}

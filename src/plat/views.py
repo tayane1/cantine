@@ -43,7 +43,7 @@ def update_plat(request, id):
         if plat_form.is_valid():
             plat_form.save()
             messages.success(request,'Le plat a bien été modifié')
-            return redirect('plat:index')
+            return redirect('plat/plats.html')
         else:
             messages.error(request, 'Erreur lors de la modification du plat')
             return render(request, 'plat/add_plat.html', {'form': plat_form})
